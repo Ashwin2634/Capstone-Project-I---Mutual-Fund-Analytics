@@ -5,7 +5,7 @@ Follow these steps to get the project up and running:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/yourusername/your-repo-name.git](https://github.com/Ashwin2634/Capstone-Project-I---Mutual-Fund-Analytics.git
    cd your-repo-name
 2. Install the required dependencies:
    ```bash
