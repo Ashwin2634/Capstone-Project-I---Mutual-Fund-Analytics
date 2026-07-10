@@ -47,6 +47,34 @@ bluestock_mf_capstone/
 └── README.md
 
 
+## 🗂️ Repository Structure
+
+```bash
+bluestock_mf_capstone/
+├── data/                    # Raw and processed datasets
+├── notebooks/               # Jupyter notebooks for EDA & analysis
+│   ├── 01_data_ingestion.ipynb
+│   ├── 02_data_cleaning.ipynb
+│   ├── 03_eda_analysis.ipynb
+│   ├── 04_performance_analytics.ipynb
+│   └── 05_advanced_analytics.ipynb
+├── scripts/                 # Production Python scripts
+├── src/                     # Source code & project documents
+├── reports/                 # Generated reports & newsletters
+├── dashboard/               # Power BI or other dashboard files
+├── sql/                     # SQL queries and schema
+├── processed/               # Cleaned & enriched datasets (generated)
+├── db/                      # SQLite database (generated)
+├── streamlit_app.py         # Interactive Streamlit dashboard
+├── run_pipeline.py          # Main orchestration script
+├── email_report.py          # Automated newsletter generator
+├── requirements.txt
+├── data_dictionary.md       # Complete data dictionary
+└── README.md
+```
+
+
+
 ---
 
 ## 🚀 Installation & Setup
@@ -106,37 +134,37 @@ This will:
 
 ## 🛠️ Tech Stack
 
--**Language**: Python
--**Data Processing**: Pandas, NumPy
--**Visualization**: Plotly, Streamlit
--**Database**: SQLite
--**Notebooks**: Jupyter
--**Reporting**: HTML + Email automation
--**Advanced Analytics**: SciPy, statsmodels, Monte Carlo simulations
+- **Language**: Python
+- **Data Processing**: Pandas, NumPy
+- **Visualization**: Plotly, Streamlit
+- **Database**: SQLite
+- **Notebooks**: Jupyter
+- **Reporting**: HTML + Email automation
+- **Advanced Analytics**: SciPy, statsmodels, Monte Carlo simulations
 
 
 ## 📚 Data Sources
 
--AMFI India
--mfapi.in
--NSE India / BSE India
--Bluestock Fintech Capstone Dataset
-
--Data Period: January 2022 – May 2026
+- AMFI India
+- mfapi.in
+- NSE India / BSE India
+- Bluestock Fintech Capstone Dataset
+ 
+Data Period: January 2022 – May 2026
 
 ## 📄 Documentation
  
--Data Dictionary — Detailed schema of all datasets
--Notebooks in /notebooks/ folder for methodology and analysis
--Project report available in /src/
+- Data Dictionary — Detailed schema of all datasets
+- Notebooks in /notebooks/ folder for methodology and analysis
+- Project report available in /src/
 
 
 ## 🎯 Purpose
 This capstone project demonstrates real-world application of data engineering, financial analytics, and full-stack data science skills in the Indian Mutual Fund industry.
 
 ## 👤 Author
-Pavan Kumar Koti
-Intern, Bluestock Fintech Pvt. Ltd. (Cohort 2025)
+Ashwin Prajapati
+Intern, Bluestock Fintech Pvt. Ltd. (Cohort 2026)
 
 ## 📄 License
 This project is for educational and portfolio purposes. All rights reserved by Bluestock Fintech Pvt. Ltd.
