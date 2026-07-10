@@ -70,12 +70,13 @@ bluestock_mf_capstone/
 3. Run the main scripts:
    ```bash
    python run_pipeline.py
-This will:
-- Ingest and clean data
-- Create SQLite database
-- Compute all performance metrics
-- Run advanced analytics
-- Generate reports
+   ```
+   This will:
+   - Ingest and clean data
+   - Create SQLite database
+   - Compute all performance metrics
+   - Run advanced analytics
+   - Generate reports
 4. Launch the Streamlit Dashboard
    ```bash
    streamlit run streamlit_app.py
