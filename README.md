@@ -1,6 +1,3 @@
-
--------------------------------------------------------------------------------------------------------------------------------------
-
 # Bluestock Mutual Fund Analytics Platform
 
 **A comprehensive Mutual Fund Analytics & Insights Platform** built as a Capstone Project for **Bluestock Fintech Pvt. Ltd.**
