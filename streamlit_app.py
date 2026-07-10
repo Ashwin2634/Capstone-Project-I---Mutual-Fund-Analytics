@@ -159,7 +159,7 @@ page = st.sidebar.radio(
 
 st.sidebar.divider()
 st.sidebar.caption("Data: AMFI India | mfapi.in | Jan 2022 – May 2026")
-st.sidebar.caption("Built by Pavan Kumar Koti | Intern Cohort 2025")
+st.sidebar.caption("Built by Ashwin Prajapati | Intern Cohort 2026")
 
 
 # ============================================================================
