@@ -1,3 +1,14 @@
+"""
+Mutual Fund Recommender System
+
+A simple rule-based recommender that suggests top mutual funds based on user-specified 
+risk level (Low / Moderate / High). 
+
+It uses historical NAV data to compute annualized Sharpe ratios and ranks funds within 
+each risk category. The system loads cleaned data from the processed directory and 
+provides top-3 recommendations.
+"""
+
 import pandas as pd
 import numpy as np
 import os
@@ -14,6 +25,7 @@ FUND_PATH = DATA_DIR / "01_fund_master_cleaned.csv"
 
 # ================= LOAD DATA =================
 def load_data():
+    """Load NAV history and fund master data from processed files."""
     try:
         print("Loading data...")
         
@@ -34,6 +46,7 @@ def load_data():
 
 # ================= STANDARDIZE RISK CATEGORY =================
 def standardize_risk_category(fund):
+    """Standardize risk category values into consistent Low/Moderate/High groups."""
     risk_mapping = {
         'Low': ['Low', 'LOW'],
         'Moderate': ['Moderate', 'MODERATE'],
@@ -53,6 +66,7 @@ def standardize_risk_category(fund):
 
 # ================= COMPUTE RETURNS =================
 def compute_returns(nav):
+    """Compute daily returns for each fund and drop NaN values."""
     nav = nav.copy()
     nav['date'] = pd.to_datetime(nav['date'])
     nav = nav.sort_values(['amfi_code', 'date'])
@@ -65,6 +79,7 @@ def compute_returns(nav):
 
 # ================= CALCULATE SHARPE RATIO =================
 def calculate_sharpe_ratio(nav):
+    """Calculate annualized Sharpe ratio (rf=0) grouped by fund."""
     sharpe_df = nav.groupby('amfi_code')['return'].agg(['mean', 'std']).reset_index()
 
     # Annualized Sharpe Ratio (rf = 0)
@@ -78,6 +93,12 @@ def calculate_sharpe_ratio(nav):
 
 # ================= RECOMMENDER =================
 def recommend_funds(risk_level, nav, fund):
+    """
+    Recommend top 3 funds for a given risk level based on Sharpe ratio.
+    
+    Returns:
+        DataFrame with top recommendations or empty DataFrame if none found.
+    """
     try:
         risk_level = risk_level.strip().capitalize()
         if risk_level not in ['Low', 'Moderate', 'High']:

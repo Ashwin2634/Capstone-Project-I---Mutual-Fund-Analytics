@@ -1,0 +1,7 @@
+portfolio,weights,expected_return_ann_pct,volatility_ann_pct,sharpe_ratio
+Individual - SBI Bluechip,100% SBI Bluechip,16.52,11.64,1.42
+Individual - SBI Small Cap,100% SBI Small Cap,21.64,21.27,1.017
+Individual - SBI Magnum Gilt,100% SBI Magnum Gilt,4.0,3.36,1.193
+Individual - ICICI Pru Bluechip,100% ICICI Pru Bluechip,12.57,11.75,1.07
+Individual - HDFC Top 100,100% HDFC Top 100,2.55,12.3,0.207
+Max Sharpe Portfolio,"20.3%, 7.9%, 54.6%, 14.8%, 2.4%",9.17,3.97,2.311

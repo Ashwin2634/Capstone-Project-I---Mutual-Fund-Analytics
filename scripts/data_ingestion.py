@@ -1,3 +1,10 @@
+"""
+Data Ingestion & Initial Profiling Module
+
+Loads all raw CSV datasets from the data/raw directory, performs basic profiling,
+detects anomalies, and runs key data quality checks (fund master analysis,
+AMFI referential integrity, and overall summary).
+"""
 import pandas as pd
 import numpy as np
 import os
@@ -17,7 +24,7 @@ dataset_filesName = [f for f in os.listdir(data_directory) if f.endswith('.csv')
 csv_to_df={}
 
 def ingest_data() : 
-    
+    """Load all CSV files, print shape/dtypes/head, and flag missing/duplicates."""
     for file in dataset_filesName :
         print("\n" + "-" * 55)
         print(f"FILE: {file}")
@@ -56,6 +63,7 @@ def ingest_data() :
 
 
 def analyse_fund_master() :
+    """Analyze and print key metrics from the fund master dataset."""
     # print("\n----------------------------------------------\n")
     print("\n" + "-" * 55)
     fund_master_df = csv_to_df["01_fund_master.csv"]
@@ -72,6 +80,7 @@ def analyse_fund_master() :
 
 
 def check_amfi_code_integrity() :
+    """Check referential integrity between fund_master and nav_history AMFI codes."""
     print("\n" + "=" * 55)
     print("  REFERENTIAL INTEGRITY: fund_master ↔ nav_history")
     print("=" * 55)
@@ -94,6 +103,7 @@ def check_amfi_code_integrity() :
 
 
 def print_summary() :
+    """Print comprehensive data quality summary and recommended actions."""
     print("\n" + "=" * 55)
     print("           DATA QUALITY SUMMARY")
     print("=" * 55)

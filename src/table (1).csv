@@ -1,0 +1,7 @@
+Concept,What You Must Know (Key Points),Hands-on Practice
+Stock Market Basics,"Stock = ownership in company. Equity, Stock Exchange (NSE/BSE in India, NYSE/NASDAQ), IPO, Listing",Fetch data for any stock
+Price & Volume,"OHLC (Open, High, Low, Close), Market Cap, Trading Volume, Bid-Ask Spread, Market/Limit Orders",Plot OHLC chart
+Indices,"NIFTY 50, SENSEX, Sectoral indices. How index is calculated, Index Funds/ETFs",Compare NIFTY vs individual stock
+Technical Analysis (Basics),"Candlestick charts, Support/Resistance, MA/EMA, RSI, MACD, Bollinger Bands",Use pandas_ta or plot with matplotlib
+Fundamental Analysis (Basics),"P/E Ratio, EPS, P/B Ratio, Revenue, Profit, Annual Report, Balance Sheet",Calculate simple ratios in Pandas
+Market Data APIs,"yfinance, NSEpy, Alpha Vantage. Fetch historical & real-time data in Python",Core practice
