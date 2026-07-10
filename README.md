@@ -23,20 +23,39 @@ This project delivers an end-to-end **Mutual Fund Analytics Platform** focused o
 
 ```bash
 bluestock_mf_capstone/
-├── data/                    # Raw and processed datasets
-├── notebooks/               # Jupyter notebooks for EDA & analysis
+├── data/
+│   ├── raw/           ← original downloaded files
+│   ├── processed/     ← cleaned, merged CSVs
+│   └── db/            ← bluestock_mf.db (SQLite)
+|   └── readme.md
+├── notebooks/
 │   ├── 01_data_ingestion.ipynb
 │   ├── 02_data_cleaning.ipynb
 │   ├── 03_eda_analysis.ipynb
 │   ├── 04_performance_analytics.ipynb
 │   └── 05_advanced_analytics.ipynb
-├── scripts/                 # Production Python scripts
-├── src/                     # Source code & project documents
-├── reports/                 # Generated reports & newsletters
-├── dashboard/               # Power BI or other dashboard files
-├── sql/                     # SQL queries and schema
-├── processed/               # Cleaned & enriched datasets (generated)
-├── db/                      # SQLite database (generated)
+|   └── readme.md
+├── scripts/
+│   ├── etl_pipeline.py
+│   ├── live_nav_fetch.py
+│   ├── compute_metrics.py
+│   ├── recommender.py
+|   ├── Monte_Carlo_simulation.py
+|   ├── Markowitz_Efficient_Frontier.py
+|   ├── scheduled_etl.py
+|   └── readme.md
+├── sql/
+│   ├── schema.sql
+│   └── queries.sql
+|   └── readme.md
+├── dashboard/
+│   ├── bluestock_mf.pbix
+|   └── dashboard.pdf
+|   └── readme.md
+├── reports/
+│   ├── Final_Report.pdf
+│   └── Presentation.pptx
+|   └── readme.md
 ├── streamlit_app.py         # Interactive Streamlit dashboard
 ├── run_pipeline.py          # Main orchestration script
 ├── email_report.py          # Automated newsletter generator
@@ -44,8 +63,6 @@ bluestock_mf_capstone/
 ├── data_dictionary.md       # Complete data dictionary
 └── README.md
 ```
-
-
 
 ---
 
